@@ -305,6 +305,7 @@ header nav ul li:nth-child(4) > a {
   left: -380px;
   border-bottom-right-radius: 355px;
 }
+
 .feature .img img {
   transform: translateY(-47px);
 }
@@ -468,12 +469,20 @@ header nav ul li:nth-child(4) > a {
   font-size: 20px;
   font-weight: normal;
 }
-.question h5::after {
+.question::after {
   content: url(../images/icon-arrow.svg);
   position: absolute;
   top: 0;
   right: -179px;
   width: 200px;
+}
+.active:after {
+  content: url(../images/icon-arrow.svg);
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 200px;
+  transform: rotate(180deg);
 }
 .question hr {
   width: 100%;

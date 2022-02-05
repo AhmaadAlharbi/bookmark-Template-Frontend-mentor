@@ -85,14 +85,32 @@
           </p>
           <nav>
             <ul id="features-nav">
-              <li id="tab-1" class="active">Simple Bookmarking</li>
-              <li id="tab-2">Speedy Searching</li>
-              <li id="tab-3">Easy Sharing</li>
+              <li
+                id="tab-1"
+                class="active tablinks"
+                onclick="openTab(event, 'tab-1-content')"
+              >
+                Simple Bookmarking
+              </li>
+              <li
+                class="tablinks"
+                id="tab-2"
+                onclick="openTab(event, 'tab-2-content')"
+              >
+                Speedy Searching
+              </li>
+              <li
+                class="tablinks"
+                id="tab-3"
+                onclick="openTab(event, 'tab-3-content')"
+              >
+                Easy Sharing
+              </li>
             </ul>
           </nav>
         </div>
         <div class="main-features" id="features-div">
-          <div class="feature" id="tab-1-content">
+          <div class="feature tabcontent" id="tab-1-content">
             <div class="img">
               <img src="images/illustration-features-tab-1.svg" alt="" />
             </div>
@@ -106,29 +124,31 @@
               <button>More info</button>
             </div>
           </div>
-          <div class="feature hide" id="tab-2-content">
+          <div class="feature hide tabcontent" id="tab-2-content">
             <div class="img">
               <img src="images/illustration-features-tab-2.svg" alt="" />
             </div>
             <div class="text">
               <h3>Intelligent search</h3>
               <p>
-                Our powerful search feature will help you find saved sites in no
-                time at all. No need to trawl through all of your bookmarks.
+                Our powerful search feature will help you find saved<br />
+                sites in no time at all. No need to trawl through all of<br />
+                your bookmarks.
               </p>
               <button>More info</button>
             </div>
           </div>
 
-          <div class="feature hide" id="tab-3-content">
+          <div class="feature hide tabcontent" id="tab-3-content">
             <div class="img">
               <img src="images/illustration-features-tab-3.svg" alt="" />
             </div>
             <div class="text">
               <h3>Share your bookmarks</h3>
               <p>
-                Easily share your bookmarks and collections with others. Create
-                a shareable link that you can send at the click of a button.
+                Easily share your bookmarks and collections with<br />
+                others. Create a shareable link that you can send at<br />
+                the click of a button.
               </p>
               <button>More info</button>
             </div>

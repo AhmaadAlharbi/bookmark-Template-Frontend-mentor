@@ -1,11 +1,6 @@
 const burger = document.querySelector("#burger");
 const closeBurger = document.querySelector("#burger-close");
 const mobileNav = document.querySelector("#mobile-nav");
-const featureNav = document.querySelector("#features-nav");
-const featurediv = document.querySelector("#features-div");
-const feature1 = document.querySelector("#tab-1");
-const feature2 = document.querySelector("#tab-2");
-const feature3 = document.querySelector("#tab-3");
 //toggle mobile menu
 burger.addEventListener("click", () => {
   mobileNav.classList.toggle("hide");
@@ -13,30 +8,24 @@ burger.addEventListener("click", () => {
 closeBurger.addEventListener("click", () => {
   mobileNav.classList.toggle("hide");
 });
-// shuffle tabs
-featureNav.addEventListener("click", (e) => {});
-let NavLi = Array.from(featureNav.children);
 
-NavLi.forEach((li) => {
-  li.addEventListener("click", (e) => {
-    console.log(e.target.id);
-    const tabContentItem = document.querySelector(`#${e.target.id}-content`);
-    tabContentItem.classList.add("show");
-  });
-});
-console.log(NavLi);
-
-NavLi.forEach((li) => {
-  li.addEventListener("click", (e) => {
-    console.log(e.target.id);
-    const tabContentItem = document.querySelector(`#${e.target.id}-content`);
-    tabContentItem.classList.contains("hide")
-      ? tabContentItem.classList.remove("hide")
-      : tabContentItem.classList.add("hide");
-  });
-});
-
-// Listen for tab item click
-NavLi.forEach((li) => {
-  li.addEventListener("click", selectItem);
-});
+//to show and hide tabs
+function openTab(evt, contentId) {
+  let i, tabcontent, tablinks;
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className
+      ? tablinks[i].classList.remove("active")
+      : tablinks[i].classList.add("active");
+  }
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(contentId).style.display = "flex";
+  evt.currentTarget.className += " show";
+  evt.currentTarget.className += " active";
+}

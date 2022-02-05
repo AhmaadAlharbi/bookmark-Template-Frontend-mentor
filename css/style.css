@@ -56,6 +56,7 @@ img {
 button {
   cursor: pointer;
 }
+
 main {
   position: relative;
   overflow: hidden;
@@ -81,6 +82,9 @@ header nav ul li:nth-child(4) {
   background-color: var(--soft-red);
   padding: 10px 30px;
   border-radius: 4px;
+}
+header nav ul li:nth-child(4):hover {
+  background-color: rgb(255, 96, 96);
 }
 header nav ul li:nth-child(4) > a {
   color: white;
@@ -190,11 +194,17 @@ header nav ul li:nth-child(4) > a {
   border: none;
   font-weight: 500;
 }
+.landing-buttons button:first-of-type:hover {
+  background: rgb(101, 65, 185);
+}
 .landing-buttons button:nth-child(2) {
   background: hsl(0deg 0% 97%);
   border: none;
   padding: 15px 25px;
   border-radius: 5px;
+}
+.landing-buttons button:nth-child(2):hover {
+  background: rgb(226, 226, 226);
 }
 .landing .img {
   flex: 1;
@@ -332,6 +342,10 @@ header nav ul li:nth-child(4) > a {
   color: white;
   border-radius: 5px;
 }
+.text button:hover {
+  background: rgb(101, 65, 185);
+}
+
 .tabcontent {
   animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }
@@ -417,6 +431,9 @@ header nav ul li:nth-child(4) > a {
   color: white;
   padding: 10px 20px;
   border: none;
+}
+.card button:hover {
+  background: rgb(101, 65, 185);
 }
 
 .cards div:nth-child(2) {
@@ -538,6 +555,9 @@ header nav ul li:nth-child(4) > a {
   border: none;
   background: var(--soft-red);
   color: white;
+}
+.contact button:hover {
+  background: rgb(209, 67, 67);
 }
 
 @media (max-width: 992px) {

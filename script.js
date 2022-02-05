@@ -1,11 +1,12 @@
 const burger = document.querySelector("#burger");
 const closeBurger = document.querySelector("#burger-close");
 const mobileNav = document.querySelector("#mobile-nav");
+
 //toggle mobile menu
 burger.addEventListener("click", () => {
   mobileNav.classList.toggle("hide");
 });
-closeBurger.addEventListener("click", () => {
+mobileNav.addEventListener("click", () => {
   mobileNav.classList.toggle("hide");
 });
 
@@ -39,7 +40,7 @@ for (i = 0; i < question.length; i++) {
     this.classList.toggle("active");
 
     /* Toggle between hiding and showing the active panel */
-    var answer = this.nextElementSibling;
+    let answer = this.nextElementSibling;
     if (answer.style.display === "block") {
       answer.style.display = "none";
     } else {

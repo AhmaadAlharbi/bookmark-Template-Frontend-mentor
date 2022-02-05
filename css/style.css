@@ -58,6 +58,7 @@ button {
 }
 main {
   position: relative;
+  overflow: hidden;
 }
 /*header*/
 header {
@@ -111,7 +112,7 @@ header nav ul li:nth-child(4) > a {
     background: var(--Very-Dark-Blue);
     margin-top: 10px;
     position: absolute;
-    top: -50px;
+    top: -10px;
     width: 100%;
     z-index: 10;
   }
@@ -460,14 +461,17 @@ header nav ul li:nth-child(4) > a {
 }
 .questions {
   margin-top: 40px;
+  padding: 20px;
 }
 .questions .question {
   position: relative;
   margin-top: 30px;
+  cursor: pointer;
 }
 .question h5 {
   font-size: 20px;
   font-weight: normal;
+  color: var(--Very-Dark-Blue);
 }
 .question::after {
   content: url(../images/icon-arrow.svg);
@@ -476,7 +480,7 @@ header nav ul li:nth-child(4) > a {
   right: -179px;
   width: 200px;
 }
-.active:after {
+.question.active:after {
   content: url(../images/icon-arrow.svg);
   position: absolute;
   top: 0;
@@ -487,7 +491,7 @@ header nav ul li:nth-child(4) > a {
 .question hr {
   width: 100%;
   margin: 10px 0;
-  border: 0.3px dotted var(--Grayish-Blue);
+  border: 0.1px dotted var(--Grayish-Blue);
 }
 .answer {
   display: none;
@@ -495,6 +499,12 @@ header nav ul li:nth-child(4) > a {
 .answer p {
   color: var(--Grayish-Blue);
   margin: 20px 0;
+}
+@media (max-width: 992px) {
+  .question::after {
+    top: 8px;
+    right: -204px;
+  }
 }
 /*end faq*/
 /*start contact*/
